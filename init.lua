@@ -43,5 +43,14 @@ require("lazy").setup({
 		"RRethy/nvim-base16",
 		lazy = true,
 	},
+    {
+    'nvim-telescope/telescope.nvim', tag = '0.1.1',
+-- or                              , branch = '0.1.1',
+	cmd = "Telescope",
+    keys = {
+      { "<leader>p", ":Telescope find_files<CR>", desc = "find files" },
+    },
+      dependencies = { 'nvim-lua/plenary.nvim' }
+    }
 })
 vim.cmd.colorscheme("base16-tender")
